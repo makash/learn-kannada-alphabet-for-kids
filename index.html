@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kannada Alphabet Learner</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header>
+        <h1>Kannada Alphabet Learner</h1>
+        <p class="subtitle">Simple practice for ages 6-8</p>
+      </header>
+
+      <main>
+        <section class="card">
+          <div class="toolbar">
+            <button id="prevBtn" type="button">◀ Prev</button>
+            <span id="position">1 / 1</span>
+            <button id="nextBtn" type="button">Next ▶</button>
+          </div>
+
+          <div class="quick-jump">
+            <p class="hint">Jump to a letter</p>
+            <div id="quickNav" class="quick-nav" aria-label="Jump to letter"></div>
+          </div>
+
+          <div class="split">
+            <div class="panel left">
+              <h2>Kannada</h2>
+              <div class="kannada-char-wrap">
+                <p id="kannadaChar" class="kannada-char" aria-live="polite">?</p>
+                <button id="playKannada" type="button" class="icon-btn" aria-label="Hear Kannada letter">
+                  🔊
+                </button>
+              </div>
+              <div class="main-word-row">
+                <button id="mainWord" type="button" class="main-word" aria-label="Hear example word">...</button>
+                <div class="main-word-meta">
+                  <span id="mainTranslit" class="main-translit">...</span>
+                  <span id="mainMeaning" class="main-meaning">...</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel right">
+              <div class="lang-toggle" role="tablist" aria-label="Language">
+                <button id="toggleEnglish" class="active" role="tab" aria-selected="true" type="button">English</button>
+                <button id="toggleHindi" role="tab" aria-selected="false" type="button">हिन्दी</button>
+              </div>
+
+              <h3 id="equivalentLabel">Equivalent letter</h3>
+              <p id="equivalent" class="equiv" aria-live="polite">?</p>
+            </div>
+          </div>
+
+          <div class="word-section">
+            <p class="hint">Tap words to hear pronunciation</p>
+            <div id="wordList" class="word-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="app-footer">
+      <div class="footer-line">
+        <span>© 2026 <a href="https://github.com/makash" target="_blank" rel="noopener noreferrer">@makash</a>. All rights reserved.</span>
+      </div>
+      <div class="footer-line">
+        <span>Audio is generated using the</span>
+        <span id="providerLabel">Google TTS</span>
+        <span>API.</span>
+        <div class="provider-toggle" role="tablist" aria-label="TTS Provider">
+          <button id="toggleGoogle" class="active" role="tab" aria-selected="true" type="button">Google TTS</button>
+          <button id="toggleSarvam" role="tab" aria-selected="false" type="button">Sarvam TTS</button>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js');
+        });
+      }
+    </script>
+  </body>
+</html>

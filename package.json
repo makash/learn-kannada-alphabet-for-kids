@@ -1,0 +1,9 @@
+{
+  "name": "kannada-english-hindi-alphabet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate-audio": "node scripts/generate-audio.mjs",
+    "generate-audio:sarvam": "node scripts/generate-audio-sarvam.mjs"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-02-18T13:22:51.441Z",
+  "provider": "Google Cloud Text-to-Speech",
+  "locales": [
+    "en-US",
+    "hi-IN",
+    "kn-IN"
+  ]
+}

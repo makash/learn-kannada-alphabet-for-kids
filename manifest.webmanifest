@@ -1,0 +1,17 @@
+{
+  "name": "Kannada Alphabet Learner",
+  "short_name": "KannadaABC",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "description": "A simple progressive web app to learn Kannada letters with English/Hindi support.",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "lang": "en"
+}
